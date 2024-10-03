@@ -1,0 +1,23 @@
+@startuml
+class HttpProxy {
+    remove_expired_cache_entries()
+    apply_waf()
+    check_blacklist()
+    check_destination_blacklist()
+    check_source_destination_blacklist()
+    authenticate_user()
+    load_cache()
+    save_cache()
+    periodic_cache_maintenance()
+    start()
+    extract_destination_host()
+    extract_url_from_request()
+    handle_client()
+    signal_handler()
+        address
+    port
+    cache_save_interval
+    cache
+    __init__()
+}
+@enduml

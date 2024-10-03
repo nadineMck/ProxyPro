@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authenticated</title>
+    <style>
+        body {
+            font-family:'Arial';
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            height: 100vh;
+            background-image: url('https://raw.githubusercontent.com/najlasadek/images/main/authenticated1.jpg'); /* Replace with your image URL */
+            background-size: cover;
+            color: #fff;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            animation: moveText 1s infinite; /* Apply animation to h1 */
+        }
+
+        p {
+            font-size: 20px;
+            margin-bottom: 20px;
+            animation: moveText 1s infinite; /* Apply animation to p */
+        }
+
+        @keyframes moveText {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0); }
+        }
+
+        form {
+            display: flex;
+            width: 300px;
+            height: 120px;
+            flex-direction: column;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0.8); /* Adjust background color transparency */
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        label {
+            margin-bottom: 15px;
+        }
+
+        select {
+            padding: 10px;
+            margin-bottom: 5px;
+            border-radius: 5px;
+            border: none;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color:  #dadada; /* Button color */
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #a9a9a9; /* Button color on hover */
+        }
+    </style>
+</head>
+<body>
+    <h1>Authentication Successful</h1>
+    <p>Welcome, {{ username }}!</p>
+    <form action="/action" method="post">
+        <label for="choice">Choose an action:</label>
+        <select id="choice" name="choice" required>
+            <option value="1">Access a website</option>
+            <option value="2">Download a file</option>
+            <option value="3">Send emails</option>
+        </select>
+        <br>
+        <button type="submit">Continue</button>
+    </form>
+</body>
+</html>

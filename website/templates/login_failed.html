@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Failed</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            height: 100vh;
+            background: url('https://raw.githubusercontent.com/najlasadek/images/main/loginfailed1.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+        }
+
+        h1 {
+            font-size: 70px;
+            margin-bottom: 10px;
+            animation: growShrink 0.8s infinite alternate; /* Apply the animation */
+        }
+
+        p {
+            font-size: 20px;
+            margin-bottom: 20px;
+            animation: growShrink 0.8s infinite alternate; /* Apply the same animation */
+        }
+
+        @keyframes growShrink {
+            0% {
+                transform: scale(1); /* Initial size */
+            }
+            100% {
+                transform: scale(1.1); /* Increased size */
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Authentication Failed</h1>
+    <p>Invalid username or password. Please try again.</p>
+</body>
+</html>

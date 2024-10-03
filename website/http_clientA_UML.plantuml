@@ -1,0 +1,18 @@
+@startuml
+class HttpClient {
+    authenticate()
+    send_request()
+    download_file()
+    parse_url()
+    parse_proxy_address()
+    is_authenticated()
+        proxy_address
+    authenticated
+    credentials
+    key
+    key
+    authenticated
+    credentials
+    __init__()
+}
+@enduml

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROXYPRO - Your Secure Proxy Service</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Ariel';
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            height: 100vh;
+            background: url('https://raw.githubusercontent.com/najlasadek/images/main/welcome1.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        h1, h2, p, button {
+            font-family: 'Great Vibes'; /* Applying the decorative font */
+            margin: 0;
+            opacity: 0; /* Hide text initially */
+            animation: revealText 3s forwards; /* Apply animation to all text */
+        }
+
+        h1 span {
+            display: inline-block;
+            opacity: 0;
+            transform: translateY(50px); /* Move letters down initially */
+            animation: revealLetter 1s forwards; /* Apply animation to individual letters */
+            animation-delay: calc(var(--index) * 0.1s); /* Delay animation for each letter */
+        }
+
+        h1 {
+            font-size: 60px;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        button {
+            background-color: #c5c5c57c;
+            color: white;
+            padding: 15px 30px;
+            font-size: 20px;
+            cursor: pointer;
+            border: none;
+            border-radius: 50px; /* Make it round */
+            transition: background-color 0.3s;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        button:hover {
+            background-color: #cccccc;
+        }
+
+        .icon {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        @keyframes revealText {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes revealLetter {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <i class="fas fa-globe icon"></i>
+        <h1>
+            <span style="--index: 1;">P</span>
+            <span style="--index: 2;">R</span>
+            <span style="--index: 3;">O</span>
+            <span style="--index: 4;">X</span>
+            <span style="--index: 5;">Y</span>
+            <span style="--index: 6;">P</span>
+            <span style="--index: 7;">R</span>
+            <span style="--index: 8;">O</span>
+        </h1>
+        <h2>your secure proxy service</h2>
+        <p>convenient access</p>
+        <button onclick="location.href='/login'"><i class="fas fa-sign-in-alt"></i> Log In</button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            height: 100vh;
+            background: url('https://raw.githubusercontent.com/najlasadek/images/main/index1.png') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+            animation: bounce 1s infinite alternate; /* Apply bounce animation */
+        }
+
+        @keyframes bounce {
+            to {
+                transform: translateY(-15px); /* Adjust the amount of bounce */
+            }
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: rgba(189, 189, 189, 0.7);
+            padding: 20px;
+            border-radius: 8px;
+            margin-right: 0px; /* Adjust margin-left as needed */
+            margin-bottom: 30px;
+        }
+
+        label {
+            margin-bottom: 30px; /* Adjust the space between labels */
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: none;
+            background-color: #a9a9a9;
+            color: #fff;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #dadada;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #a9a9a9;
+        }
+    </style>
+</head>
+<body>
+    <h1><span class="login">Login</span></h1>
+    <form action="/login" method="post">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <button type="submit">Log In</button>
+    </form>
+</body>
+</html>

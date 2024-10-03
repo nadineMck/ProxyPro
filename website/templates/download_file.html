@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download File</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-image: url('https://raw.githubusercontent.com/najlasadek/images/main/downloadfile1.jpg');
+            background-size: cover;
+            color: #fff;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            animation: bounce 0.8s infinite alternate;
+        }
+
+        @keyframes bounce 
+        {
+        to {
+            transform: translateY(-15px); /* Adjust the amount of bounce */
+        }
+        }
+
+        form {
+            width: 60%; /* Adjust width as needed */
+            max-width: 600px; /* Max width */
+            max-height: 130px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: rgba(225, 225, 225, 0.8);
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px; /* Adjust top margin */
+        }
+
+        label {
+            margin-bottom: 10px;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: none;
+            width: calc(100% - 20px); /* Adjust width */
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #dadada; /* Button color */
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #a9a9a9; /* Button color on hover */
+        }
+    </style>
+</head>
+<body>
+    <h1>Download a File</h1>
+    <form action="/perform_action" method="post">
+        <label for="file_url">Enter the file URL:</label>
+        <input type="text" id="file_url" name="file_url" required>
+        <br>
+        <input type="hidden" name="choice" value="2">
+        <button type="submit">Download File</button>
+    </form>
+</body>
+</html>
